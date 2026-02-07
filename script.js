@@ -31,3 +31,8 @@ list.addEventListener('click', function(ev) {
         ev.target.classList.toggle('checked');
     }
 }, false);
+
+// Commit 1: Tạo hàm xóa cơ bản
+function hideTask(element) {
+    element.style.display = "none";
+}
