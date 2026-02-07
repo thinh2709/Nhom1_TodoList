@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
+
 .container {
   width: 50%;
   margin: 50px auto;
@@ -17,6 +18,7 @@ input[type='text'] {
   padding: 10px;
   border: 1px solid #ccc;
 }
+
 #addBtn {
   padding: 10px 20px;
   background: #28a745;
@@ -24,6 +26,22 @@ input[type='text'] {
   border: none;
   cursor: pointer;
 }
+
 #addBtn:hover {
   background: #218838;
+}
+
+/* Commit 1: List style */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px;
+  background: #eee;
+  margin-top: 5px;
+  transition: 0.2s;
 }
