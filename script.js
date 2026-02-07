@@ -47,3 +47,13 @@ document.querySelector('ul').addEventListener('click', function(e) {
 });
 // Commit 1: Logic sửa đổi
 // Double click vào task để sửa
+// Commit 2: Thêm sự kiện double click
+document.querySelector('ul').addEventListener('dblclick', function(e) {
+    if (e.target.tagName === 'LI') {
+        let currentText = e.target.firstChild.textContent; // Lấy text hiện tại (trừ nút X)
+        let newText = prompt("Sửa công việc:", currentText);
+        if (newText != null && newText != "") {
+            e.target.firstChild.textContent = newText;
+        }
+    }
+});
