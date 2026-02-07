@@ -45,3 +45,5 @@ document.querySelector('ul').addEventListener('click', function(e) {
         div.style.display = "none";
     }
 });
+// Commit 1: Logic sửa đổi
+// Double click vào task để sửa
