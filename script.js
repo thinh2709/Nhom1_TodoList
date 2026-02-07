@@ -23,3 +23,5 @@ addBtn.addEventListener('click', function() {
     span.className = "close";
     li.appendChild(span);
 });
+// Commit 1: Chọn thẻ UL
+const list = document.querySelector('ul');
