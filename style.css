@@ -45,3 +45,26 @@ ul li {
   margin-top: 5px;
   transition: 0.2s;
 }
+
+/* Commit 2: Hover effects */
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
