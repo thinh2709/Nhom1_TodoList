@@ -25,3 +25,9 @@ addBtn.addEventListener('click', function() {
 });
 // Commit 1: Chọn thẻ UL
 const list = document.querySelector('ul');
+// Commit 2: Toggle class 'checked'
+list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
+}, false);
