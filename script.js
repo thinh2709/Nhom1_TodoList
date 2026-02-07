@@ -1,0 +1,25 @@
+// Commit 1: Khai báo nút
+const addBtn = document.getElementById('addBtn');
+const myInput = document.getElementById('myInput');
+const myUL = document.getElementById('myUL');
+
+// Commit 2: Hàm thêm task
+addBtn.addEventListener('click', function() {
+    const li = document.createElement("li");
+    const inputValue = myInput.value;
+    const t = document.createTextNode(inputValue);
+    li.appendChild(t);
+
+    if (inputValue === '') {
+        alert("Bạn chưa viết gì cả!");
+    } else {
+        myUL.appendChild(li);
+    }
+    myInput.value = ""; // Xóa ô nhập sau khi thêm
+
+    // Thêm nút xóa (để TV6 xử lý sau)
+    const span = document.createElement("SPAN");
+    const txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    li.appendChild(span);
+});
