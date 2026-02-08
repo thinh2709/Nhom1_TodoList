@@ -1,0 +1,15 @@
+/* Hiệu ứng khi bấm vào ô nhập liệu */
+input[type='text']:focus {
+  outline: none;
+  border: 2px solid #28a745; /* Màu xanh lá */
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); /* Hiệu ứng tỏa sáng */
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng cho nút Add khi hover */
+#addBtn {
+  transition: transform 0.2s;
+}
+#addBtn:active {
+  transform: scale(0.95); /* Thu nhỏ nhẹ khi bấm xuống */
+}
