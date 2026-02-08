@@ -31,3 +31,29 @@ list.addEventListener('click', function(ev) {
         ev.target.classList.toggle('checked');
     }
 }, false);
+
+// Commit 1: Tạo hàm xóa cơ bản
+function hideTask(element) {
+    element.style.display = "none";
+}
+
+// Commit 2: Gắn sự kiện xóa vào nút X
+// Sử dụng Event Delegation để bắt click vào nút X (class="close")
+document.querySelector('ul').addEventListener('click', function(e) {
+    if (e.target.classList.contains('close')) {
+        var div = e.target.parentElement;
+        div.style.display = "none";
+    }
+});
+// Commit 1: Logic sửa đổi
+// Double click vào task để sửa
+// Commit 2: Thêm sự kiện double click
+document.querySelector('ul').addEventListener('dblclick', function(e) {
+    if (e.target.tagName === 'LI') {
+        let currentText = e.target.firstChild.textContent; // Lấy text hiện tại (trừ nút X)
+        let newText = prompt("Sửa công việc:", currentText);
+        if (newText != null && newText != "") {
+            e.target.firstChild.textContent = newText;
+        }
+    }
+});
